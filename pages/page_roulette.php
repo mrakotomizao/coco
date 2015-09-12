@@ -44,11 +44,13 @@
 				try
 				{
 					$bdd = new PDO('mysql:host='.SERVERBD.';dbname='.DBNAME.';charset=utf8', ''.USERNAME.'', ''.PWD.'');
-                    echo 'mysql:host='.SERVERBD.';dbname='.DBNAME.';charset=utf8', ''.USERNAME.'', ''.PWD.'';
+
+
 				}
 
 			catch (Exception $e)
 				{
+                    echo 'mysql:host='.SERVERBD.';dbname='.DBNAME.';charset=utf8', ''.USERNAME.'', ''.PWD.'';
 					 die('Erreur : ' . $e->getMessage());
 				}
         ?>
