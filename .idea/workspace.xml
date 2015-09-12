@@ -94,11 +94,11 @@
       <file leaf-file-name="page_roulette.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/pages/page_roulette.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.772791">
-              <caret line="52" column="100" selection-start-line="52" selection-start-column="100" selection-end-line="52" selection-end-column="100" />
+            <state vertical-scroll-proportion="0.5203366">
+              <caret line="45" column="88" selection-start-line="45" selection-start-column="88" selection-end-line="45" selection-end-column="101" />
               <folding>
-                <marker date="1442068577725" expanded="true" signature="2133:2477" placeholder="..." />
-                <marker date="1442068577725" expanded="true" signature="2338:2371" placeholder="..." />
+                <marker date="1442068873288" expanded="true" signature="2141:2485" placeholder="..." />
+                <marker date="1442068873288" expanded="true" signature="2346:2379" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -309,7 +309,13 @@
       <option name="project" value="LOCAL" />
       <updated>1442067839397</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="test bdd">
+      <created>1442068604450</created>
+      <option name="number" value="00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1442068604450</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -449,11 +455,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/pages/page_roulette.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.772791">
-          <caret line="52" column="100" selection-start-line="52" selection-start-column="100" selection-end-line="52" selection-end-column="100" />
+        <state vertical-scroll-proportion="0.5203366">
+          <caret line="45" column="88" selection-start-line="45" selection-start-column="88" selection-end-line="45" selection-end-column="101" />
           <folding>
-            <marker date="1442068577725" expanded="true" signature="2133:2477" placeholder="..." />
-            <marker date="1442068577725" expanded="true" signature="2338:2371" placeholder="..." />
+            <marker date="1442068873288" expanded="true" signature="2141:2485" placeholder="..." />
+            <marker date="1442068873288" expanded="true" signature="2346:2379" placeholder="..." />
           </folding>
         </state>
       </provider>
