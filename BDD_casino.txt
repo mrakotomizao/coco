@@ -1,0 +1,75 @@
+-- phpMyAdmin SQL Dump
+-- version 4.0.6
+-- http://www.phpmyadmin.net
+--
+-- Client: localhost
+-- Généré le: Ven 30 Janvier 2015 à 17:35
+-- Version du serveur: 5.5.33
+-- Version de PHP: 5.5.3
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET time_zone = "+00:00";
+
+--
+-- Base de données: `casino`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `utilisateurs`
+--
+
+CREATE TABLE `utilisateurs` (
+  `ID` int(11) NOT NULL AUTO_INCREMENT,
+  `nom` varchar(255) DEFAULT NULL,
+  `prenom` varchar(255) DEFAULT NULL,
+  `pseudo` varchar(255) DEFAULT NULL,
+  `email` varchar(255) DEFAULT NULL,
+  `newsletter` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`ID`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=56 ;
+
+--
+-- Contenu de la table `utilisateurs`
+--
+
+INSERT INTO `utilisateurs` (`ID`, `nom`, `prenom`, `pseudo`, `email`, `newsletter`) VALUES
+(18, 'coet', 'charlotte', 'charlie', 'cha@gmail.com', 'oui'),
+(19, 'cong', 'cecile', 'cile', 'cecile@gmail.com', ''),
+(20, '', '', '', '', ''),
+(21, '', '', '', '', ''),
+(22, '', '', '', '', ''),
+(23, '', '', '', '', ''),
+(24, 'cha', 'cha', 'chz', 'cha@gmail.com', ''),
+(25, 'cha', 'chz', 'chz', 'chzo@gmail.com', ''),
+(26, 'cha', 'chz', 'chz', 'chzo@gmail.com', ''),
+(27, '', '', '', '', ''),
+(28, '', '', '', '', ''),
+(29, '', '', '', '', ''),
+(30, '', '', '', '', ''),
+(31, '', '', '', '', ''),
+(32, '', '', '', '', ''),
+(33, '', '', '', '', ''),
+(34, '', '', '', '', ''),
+(35, '', '', '', '', ''),
+(36, '', '', '', '', ''),
+(37, '', '', '', '', ''),
+(38, 'cha', 'chz', 'chz', 'cha@gmail.com', 'oui'),
+(39, '', '', '', '', ''),
+(40, '', '', '', '', ''),
+(41, '', '', '', '', ''),
+(42, 'c', 'c', 'c', 'c', ''),
+(43, '', '', '', '', ''),
+(44, '', '', '', '', ''),
+(45, 'cah', 'cha', 'cahrlotte', 'cha@gmail.com', 'oui'),
+(46, '', '', '', '', ''),
+(47, '', '', '', '', ''),
+(48, '', '', '', '', ''),
+(49, '', '', '', '', ''),
+(50, 'charlotte', 'coet', 'charlie', 'cha@gmail.com', 'oui'),
+(51, '', '', '', '', ''),
+(52, '', '', '', '', ''),
+(53, '', '', '', '', ''),
+(54, '', '', '', '', ''),
+(55, 'cha', 'cha', 'cha', 'cha@gmail.com', '');
