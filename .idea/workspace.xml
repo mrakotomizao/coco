@@ -95,10 +95,10 @@
         <entry file="file://$PROJECT_DIR$/pages/page_roulette.php">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.772791">
-              <caret line="52" column="109" selection-start-line="52" selection-start-column="109" selection-end-line="52" selection-end-column="109" />
+              <caret line="52" column="100" selection-start-line="52" selection-start-column="100" selection-end-line="52" selection-end-column="100" />
               <folding>
-                <marker date="1442067748110" expanded="true" signature="2141:2485" placeholder="..." />
-                <marker date="1442067748110" expanded="true" signature="2346:2379" placeholder="..." />
+                <marker date="1442068577725" expanded="true" signature="2133:2477" placeholder="..." />
+                <marker date="1442068577725" expanded="true" signature="2338:2371" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -303,7 +303,13 @@
       <option name="project" value="LOCAL" />
       <updated>1442067496725</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="test bdd">
+      <created>1442067839397</created>
+      <option name="number" value="00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1442067839397</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -338,7 +344,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="first commit" />
     <MESSAGE value="modification bdd +  suppression de fichier inutile" />
-    <option name="LAST_COMMIT_MESSAGE" value="modification bdd +  suppression de fichier inutile" />
+    <MESSAGE value="test bdd" />
+    <option name="LAST_COMMIT_MESSAGE" value="test bdd" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -408,14 +415,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/facebook-connect/app/Facebook/constants.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-6.923077">
-          <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/index.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-20.76923">
@@ -440,13 +439,21 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/facebook-connect/app/Facebook/constants.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-6.923077">
+          <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/pages/page_roulette.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.772791">
-          <caret line="52" column="109" selection-start-line="52" selection-start-column="109" selection-end-line="52" selection-end-column="109" />
+          <caret line="52" column="100" selection-start-line="52" selection-start-column="100" selection-end-line="52" selection-end-column="100" />
           <folding>
-            <marker date="1442067748110" expanded="true" signature="2141:2485" placeholder="..." />
-            <marker date="1442067748110" expanded="true" signature="2346:2379" placeholder="..." />
+            <marker date="1442068577725" expanded="true" signature="2133:2477" placeholder="..." />
+            <marker date="1442068577725" expanded="true" signature="2338:2371" placeholder="..." />
           </folding>
         </state>
       </provider>
