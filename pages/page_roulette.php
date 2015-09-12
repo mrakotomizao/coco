@@ -43,12 +43,12 @@
 		
 				try
 				{
-					$bdd = new PDO('pgsql:host='.SERVERBD.';port=5432;dbname='.DBNAME.';charset=utf8', ''.USERNAME.'', ''.PWD.'');
+					$bdd = new PDO(SERVERBD.';dbname='.DBNAME.';charset=utf8', ''.USERNAME.'', ''.PWD.'');
 				}
 
 			catch (Exception $e)
 				{
-                    echo 'mysql:host='.SERVERBD.';dbname='.DBNAME.';charset=utf8,'.USERNAME.', '.PWD;
+                    echo SERVERBD.';dbname='.DBNAME.';charset=utf8,'.USERNAME.', '.PWD;
 					 die('Erreur : ' . $e->getMessage());
 				}
         ?>
