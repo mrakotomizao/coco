@@ -39,10 +39,11 @@
             </table>
         </div>
         <?php
+        require_once "../facebook-connect/app/Facebook/constants.php";
 		
 				try
 				{
-					$bdd = new PDO('mysql:host=localhost;dbname=casino;charset=utf8', 'root', 'root');
+					$bdd = new PDO('mysql:host='.SERVERBD.';dbname='.DBNAME.';charset=utf8', ''.USERNAME.'', ''.PWD.'');
 				}
 
 			catch (Exception $e)
