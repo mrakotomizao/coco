@@ -43,7 +43,7 @@
 		
 				try
 				{
-					$bdd = new PDO(SERVERBD.';dbname='.DBNAME.';charset=utf8', ''.USERNAME.'', ''.PWD.'');
+					$bdd = new PDO(SERVERBD.';dbname='.DBNAME, ''.USERNAME.'', ''.PWD.'');
 				}
 
 			catch (Exception $e)
