@@ -43,9 +43,9 @@
 				echo '<a id="submit-index" href="'.$user.'"><span class="bouton_fb">Connexion</span></a> <input type="hidden" name="user" value="'.$user.'">';
 
 			}else{
-				var_dump($user);
-                echo "FACEBOOK";
                 $name = $user->getName();
+                $prenom = $user->getFirstname();
+
                 $queryInsert = "insert into utilisateurs(nom,prenom,email,pseudo) VALUES ('$name', 'test','test','test')";
                 try
                 {

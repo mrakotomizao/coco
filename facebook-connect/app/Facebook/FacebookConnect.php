@@ -13,20 +13,28 @@ use Facebook\FacebookSession;
 use Facebook\FacebookRequest;
 
 class FacebookConnect {
+
     private $session;
+    private $imgProfile;
+    private $facebookid;
 
     function __construct($appid, $appsecret){
-        FacebookSession::setDefaultApplication($appid, $appsecret);
-        $this->session = "";
+
+        $this->appId = $appid;
+        $this->appSecret = $appsecret;
+
     }
 
     public  function connect($redirectUrl){
 
+        FacebookSession::setDefaultApplication($this->appId, $this->appSecret);
         $helper = new FacebookRedirectLoginHelper($redirectUrl);
+
         //si la var session existe et que l'on un un fb token en session
         if(isset($_SESSION) && isset($_SESSION['fb_token'])){
             //on récupère la session active
             $this->session = new FacebookSession($_SESSION['fb_token']);
+
         }else{
 
             //on récupère le token de connexion
@@ -40,51 +48,40 @@ class FacebookConnect {
             try{
                 //génération du token
                 $_SESSION['fb_token'] = $this->session->getToken();
-                var_dump($this->session);
 
                 //si on a bien notre token de connexion on peut commencer à faire des requetes avec la classe facebookrequest
-                $request = new FacebookRequest($this->session, 'GET', '/me');
+                $request = new FacebookRequest($this->session, 'GET', '/me?fields=email,name');
                 //on recupère un objet graph user
                 $response = $request->execute()->getGraphObject('Facebook\GraphUser');
                 //var_dump($response);
 
                 //facebook id
-                $facebookId = $response->getId();
+                $this->facebookid = $response->getId();
+
                 //image profil du user
-                /*$imgProfile = '<img src="//graph.facebook.com/'.$facebookId.'/picture">';
-                echo $imgProfile;*/
-
-
+                $this->imgProfile = '<img src="//graph.facebook.com/'.$this->facebookid.'/picture">';
+                //var_dump($response->getEmail());
                 //si le user a refuser la permission de recupération du mail
-                if($response->getEmail() === null){
-                    throw new Exception('l\'email n\'est pas disponible');
-                }
-
+                /*if($response->getEmail() === null){
+                    throw new \Exception('l\'email n\'est pas disponible');
+                }*/
                 return $response;
 
             }catch (Exception $e){
                 unset($_SESSION['fb_token']);
-
                 return $helper->getReRequestUrl(['email']);
-
             }
-
-
-            //facebook id
-            //$facebookId = $response->getId();
-
-            
-            /*$imgProfile = '<img src="//graph.facebook.com/'.$facebookId.'/picture">';
-            echo $imgProfile;*/
-
-            //requete sql
-            //si l'id est en bdd : SELECT * FROM users WHERE fb_id = $facebookId
-            //sinon : INSERT INTO users SET fb_id = $facebookId, fb_firstname = $response->getFirstName()
-
-
         }else{
-            return $helper->getReRequestUrl(['email']);
-
+            return $helper->getReRequestUrl(['email','publish_actions','user_photos']);
         }
+    }
+    public function getSession(){
+        return $this->session;
+    }
+    public function getFacebookId(){
+        return $this->facebookid;
+    }
+    public function getImgProfile(){
+        $this->imgProfile;
     }
 }

@@ -28,9 +28,6 @@
 </script>
 
 <?php {
-  "require" : {
-    "facebook/php-sdk-v4" : "~5.0"
-  }
   require_once __DIR__ . '/vendor/autoload.php';
   require_once __DIR__ . '/path/to/facebook-php-sdk-v4/src/Facebook/autoload.php';
   require_once __DIR__ . '/facebook-sdk-v5/autoload.php';
