@@ -33,22 +33,37 @@
 			use App\Facebook\FacebookConnect;
 			require 'facebook-connect/app/Facebook/constants.php';
 			require 'facebook-connect/vendor/autoload.php';
-			
+
 			$connect = new FacebookConnect(APP_ID, APP_SECRET);
-			
+
 			$user = $connect->connect(REDIRECT_URL);
-			
-			
+
 			if(is_string($user)){
-			
+
 				echo '<a id="submit-index" href="'.$user.'"><span class="bouton_fb">Connexion</span></a> <input type="hidden" name="user" value="'.$user.'">';
-			
+
 			}else{
 				var_dump($user);
-			
+                echo "FACEBOOK";
+                $name = $user->getName();
+                $queryInsert = "insert into utilisateurs(nom,prenom,email,pseudo) VALUES ('$name', 'test','test','test')";
+                try
+                {
+                    $bdd = new PDO(SERVERBD.';dbname='.DBNAME, ''.USERNAME.'', ''.PWD.'');
+                    $return = $bdd->exec($queryInsert);
+                    var_dump($bdd->errorInfo());
+                    var_dump($return);
+                }
+
+                catch (Exception $e)
+                {
+                    echo SERVERBD.';dbname='.DBNAME.';charset=utf8,'.USERNAME.', '.PWD;
+                    die('Erreur : ' . $e->getMessage());
+                }
+                //header("Location: pages/page_roulette.php");
 			}
 	//echo '<a id="submit-index" href="'.$loginUrl.'"><span class="bouton_fb">Connexion</span></a>' ;
-	
+
 ?>
    		 <div
           class="fb-like"
@@ -57,6 +72,6 @@
 		</div>
    		</section>
         </div>
-        </div> 
+        </div>
 </body>
 </html>
